@@ -1,0 +1,16 @@
+[project]
+name = "omie_mcp_server"
+version = "0.1.0"
+description = "FastMCP server for Omie API integration."
+requires-python = ">=3.10"
+dependencies = [
+    "fastmcp",
+    "httpx",          # For making HTTP requests to Omie API
+    "pydantic",       # Used by FastMCP and good for data modeling
+    "pydantic-settings", # For managing configuration/secrets
+    "python-dotenv"   # To load .env files
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build" 

@@ -1,0 +1,614 @@
+Title: ClientesCadastro
+
+URL Source: http://app.omie.com.br/api/v1/geral/clientes/
+
+Markdown Content:
+ClientesCadastro
+Endpoint
+WSDL
+PHP SOAP
+JSON
+Endpoint URI
+https://app.omie.com.br/api/v1/geral/clientes/
+Métodos
+
+Veja abaixo a documentação de cada método disponível para este serviço.
+
+AlterarCliente
+
+Altera os dados do cliente
+
+Parâmetros:
+ 	clientes_cadastro	clientes_cadastro	
+Cadastro reduzido de produtos
+Retorno clientes_status: Status de retorno do cadastro de clientes.
+Exemplo:
+{
+  "codigo_cliente_integracao": "CodigoInterno0001",
+  "email": "primeiro@ccliente.com.br",
+  "razao_social": "Primeiro Cliente  Ltda Me",
+  "nome_fantasia": "Primeiro Cliente"
+}
+Teste agora mesmo
+AssociarCodIntCliente
+
+Parâmetros:
+ 	clientes_cadastro_chave	clientes_cadastro_chave	
+Chave para pesquisa do cadastro de clientes.
+Retorno clientes_status: Status de retorno do cadastro de clientes.
+Exemplo:
+{
+  "codigo_cliente_omie": 0,
+  "codigo_cliente_integracao": ""
+}
+Teste agora mesmo
+ConsultarCliente
+
+Consulta os dados de um cliente
+
+Parâmetros:
+ 	clientes_cadastro_chave	clientes_cadastro_chave	
+Chave para pesquisa do cadastro de clientes.
+Retorno clientes_cadastro: Cadastro reduzido de produtos
+Exemplo:
+{
+  "codigo_cliente_omie": 0,
+  "codigo_cliente_integracao": ""
+}
+Teste agora mesmo
+ExcluirCliente
+
+Exclui um cliente da base de dados.
+
+Parâmetros:
+ 	clientes_cadastro_chave	clientes_cadastro_chave	
+Chave para pesquisa do cadastro de clientes.
+Retorno clientes_status: Status de retorno do cadastro de clientes.
+Exemplo:
+{
+  "codigo_cliente_omie": 0,
+  "codigo_cliente_integracao": ""
+}
+Teste agora mesmo
+IncluirCliente
+
+Inclui o cliente no Omie
+
+Parâmetros:
+ 	clientes_cadastro	clientes_cadastro	
+Cadastro reduzido de produtos
+Retorno clientes_status: Status de retorno do cadastro de clientes.
+Exemplo:
+{
+  "codigo_cliente_integracao": "CodigoInterno0001",
+  "email": "primeiro@ccliente.com.br",
+  "razao_social": "Primeiro Cliente  Ltda Me",
+  "nome_fantasia": "Primeiro Cliente"
+}
+Teste agora mesmo
+IncluirClientesPorLote
+
+DEPRECATED
+
+Parâmetros:
+ 	clientes_lote_request	clientes_lote_request	
+Lote de cadastros de clientes para inclusão, limitado a 50 ocorrências por requisição.
+Retorno clientes_lote_response: Resposta do processamento do lote de clientes cadastrados.
+Exemplo:
+{
+  "clientes_cadastro": [
+      {
+          "codigo_cliente_integracao": "CodigoInterno0001",
+          "email": "primeiro@cliente.com.br",
+          "nome_fantasia": "Primeiro Cliente",
+          "razao_social": "Primeiro Cliente  Ltda Me"
+      },
+      {
+          "codigo_cliente_integracao": "CodigoInterno0002",
+          "email": "segundo@cliente.com.br",
+          "nome_fantasia": "Segundo Cliente",
+          "razao_social": "Segundo Cliente  Ltda Me"
+      }
+  ],
+  "lote": 1
+}
+Teste agora mesmo
+ListarClientes
+
+Lista os clientes cadastrados
+
+Parâmetros:
+ 	clientes_list_request	clientes_list_request	
+Lista os clientes cadastrados
+Retorno clientes_listfull_response: Lista de clientes cadastrados no omie.
+Exemplo:
+{
+  "pagina": 1,
+  "registros_por_pagina": 50,
+  "apenas_importado_api": "N"
+}
+Teste agora mesmo
+ListarClientesResumido
+
+Realiza pesquisa dos clientes
+
+Parâmetros:
+ 	clientes_list_request	clientes_list_request	
+Lista os clientes cadastrados
+Retorno clientes_list_response: Lista de clientes cadastrados no omie.
+Exemplo:
+{
+  "pagina": 1,
+  "registros_por_pagina": 50,
+  "apenas_importado_api": "N"
+}
+Teste agora mesmo
+UpsertCliente
+
+Parâmetros:
+ 	clientes_cadastro	clientes_cadastro	
+Cadastro reduzido de produtos
+Retorno clientes_status: Status de retorno do cadastro de clientes.
+Exemplo:
+{
+  "codigo_cliente_integracao": "CodigoInterno0001",
+  "email": "primeiro@ccliente.com.br",
+  "razao_social": "Primeiro Cliente  Ltda Me",
+  "nome_fantasia": "Primeiro Cliente"
+}
+Teste agora mesmo
+UpsertClienteCpfCnpj
+
+Parâmetros:
+ 	clientes_cadastro	clientes_cadastro	
+Cadastro reduzido de produtos
+Retorno clientes_status: Status de retorno do cadastro de clientes.
+Exemplo:
+{
+  "cnpj_cpf": "80.716.929/0001-50",
+  "email": "primeiro@ccliente.com.br",
+  "razao_social": "Primeiro Cliente  Ltda Me",
+  "nome_fantasia": "Primeiro Cliente"
+}
+
+Teste agora mesmo
+UpsertClientesPorLote
+
+DEPRECATED
+
+Parâmetros:
+ 	clientes_lote_request	clientes_lote_request	
+Lote de cadastros de clientes para inclusão, limitado a 50 ocorrências por requisição.
+Retorno clientes_lote_response: Resposta do processamento do lote de clientes cadastrados.
+Exemplo:
+{
+  "clientes_cadastro": [
+      {
+          "codigo_cliente_integracao": "CodigoInterno0001",
+          "email": "primeiro@cliente.com.br",
+          "nome_fantasia": "Primeiro Cliente",
+          "razao_social": "Primeiro Cliente  Ltda Me"
+      },
+      {
+          "codigo_cliente_integracao": "CodigoInterno0002",
+          "email": "segundo@cliente.com.br",
+          "nome_fantasia": "Segundo Cliente",
+          "razao_social": "Segundo Cliente  Ltda Me"
+      }
+  ],
+  "lote": 1
+}
+Teste agora mesmo
+Tipos Complexos
+caracteristicas
+
+campo	string30	Nome da característica.+
+
+conteudo	string60	Conteúdo do característica.+
+
+caracteristicasArray
+
+Este parâmetro é um array do tipo caracteristicas
+
+Lista de caracteristicas
+
+clientesFiltro
+
+Filtrar cadastro de clientes
+
+codigo_cliente_omie	integer	Código de Cliente / Fornecedor
+
+codigo_cliente_integracao	string60	Código de Integração com sistemas legados.
+
+cnpj_cpf	string20	CNPJ / CPF+
+
+razao_social	string60	Razão Social+
+
+nome_fantasia	string100	Nome Fantasia+
+
+endereco	string60	Endereço+
+
+bairro	string60	Bairro+
+
+cidade	string40	Código da Cidade+
+
+estado	string2	Sigla do Estado+
+
+cep	string10	CEP+
+
+contato	string100	Nome para contato+
+
+email	string500	E-Mail+
+
+homepage	string100	WebSite+
+
+inscricao_municipal	string20	Inscrição Municipal+
+
+inscricao_estadual	string20	Inscrição Estadual+
+
+inscricao_suframa	string20	Inscrição Suframa+
+
+pessoa_fisica	string1	Pessoa Física+
+
+optante_simples_nacional	string1	Indica se o Cliente / Fornecedor é Optante do Simples Nacional +
+
+inativo	string1	Indica se o cliente está inativo [S/N]
+
+tags	tagsArray	Tags do Cliente ou Fornecedor+
+
+clientesPorCodigo
+
+codigo_cliente_omie	integer	Código de Cliente / Fornecedor
+
+codigo_cliente_integracao	string60	Código de Integração com sistemas legados.
+
+clientesPorCodigoArray
+
+Este parâmetro é um array do tipo clientesPorCodigo
+
+Lista de clientesPorCodigo
+
+clientes_cadastro
+
+Cadastro reduzido de produtos
+
+codigo_cliente_omie	integer	Código de Cliente / Fornecedor
+
+codigo_cliente_integracao	string60	Código de Integração com sistemas legados.
+
+razao_social	string60	Razão Social+
+
+cnpj_cpf	string20	CNPJ / CPF+
+
+nome_fantasia	string100	Nome Fantasia+
+
+telefone1_ddd	string5	DDD Telefone+
+
+telefone1_numero	string15	Telefone para Contato+
+
+contato	string100	Nome para contato+
+
+endereco	string60	Endereço+
+
+endereco_numero	string60	Número do Endereço+
+
+bairro	string60	Bairro+
+
+complemento	string60	Complemento para o Número do Endereço+
+
+estado	string2	Sigla do Estado+
+
+cidade	string40	Código da Cidade+
+
+cep	string10	CEP+
+
+codigo_pais	string4	Código do País+
+
+separar_endereco	string1	Separar endereço. +
+
+pesquisar_cep	string1	Pesquisar CEP.+
+
+telefone2_ddd	string5	DDD Telefone 2+
+
+telefone2_numero	string15	Telefone 2+
+
+fax_ddd	string5	DDD Fax+
+
+fax_numero	string15	Fax+
+
+email	string500	E-Mail+
+
+homepage	string100	WebSite+
+
+inscricao_estadual	string20	Inscrição Estadual+
+
+inscricao_municipal	string20	Inscrição Municipal+
+
+inscricao_suframa	string20	Inscrição Suframa+
+
+optante_simples_nacional	string1	Indica se o Cliente / Fornecedor é Optante do Simples Nacional +
+
+tipo_atividade	string1	Tipo da Atividade+
+
+cnae	string7	Código do CNAE - Fiscal+
+
+produtor_rural	string1	Indica se o Cliente / Fornecedor é um Produtor Rural+
+
+contribuinte	string1	Indica se o cliente é contribuinte (S/N).+
+
+observacao	text	Observações Internas+
+
+obs_detalhadas	text	Observações Detalhadas.+
+
+recomendacao_atraso	string2	Código da Instrução de Protesto+
+
+tags	tagsArray	Tags do Cliente ou Fornecedor+
+
+pessoa_fisica	string1	Pessoa Física+
+
+exterior	string1	Indica que é um tomador de serviço localizado no exterior+
+
+logradouro	string6	DEPRECATED
+
+importado_api	string1	Importado pela API (S/N).
+
+bloqueado	string1	DEPRECATED
+
+cidade_ibge	string7	Código do IBGE para a Cidade.+
+
+valor_limite_credito	decimal	Valor do Limite de Crédito Total.+
+
+bloquear_faturamento	string1	Bloquear o faturamento para o cliente (S/N).+
+
+recomendacoes	recomendacoes	Recomendações do cliente.
+
+enderecoEntrega	enderecoEntrega	Dados do Endereço de Entrega.
+
+nif	string100	NIF - Número de Identificação Fiscal.+
+
+documento_exterior	string20	Documento no exterior para clientes estrangeiros.
+
+inativo	string1	Indica se o cliente está inativo [S/N]
+
+dadosBancarios	dadosBancarios	Dados Bancários do cliente.
+
+caracteristicas	caracteristicasArray	Características do cliente.
+
+enviar_anexos	string1	Enviar anexos por e-mail (S/N).+
+
+info	info	Informações sobre o cadastro do cliente.
+
+bloquear_exclusao	string1	Bloqueia a exclusão do registro. (S/N)
+
+clientes_cadastroArray
+
+Este parâmetro é um array do tipo clientes_cadastro
+
+Lista de clientes_cadastro
+
+clientes_cadastro_chave
+
+Chave para pesquisa do cadastro de clientes.
+
+codigo_cliente_omie	integer	Código de Cliente / Fornecedor
+
+codigo_cliente_integracao	string60	Código de Integração com sistemas legados.
+
+clientes_cadastro_resumido
+
+Cadastro reduzido de clientes.
+
+codigo_cliente	integer	Código de Cliente / Fornecedor
+
+codigo_cliente_integracao	string60	Código de Integração com sistemas legados.
+
+razao_social	string60	Razão Social+
+
+nome_fantasia	string100	Nome Fantasia+
+
+cnpj_cpf	string20	CNPJ / CPF+
+
+clientes_cadastro_resumidoArray
+
+Este parâmetro é um array do tipo clientes_cadastro_resumido
+
+Lista de clientes_cadastro_resumido
+
+clientes_list_request
+
+Lista os clientes cadastrados
+
+pagina	integer	Número da página retornada
+
+registros_por_pagina	integer	Número de registros retornados na página.
+
+apenas_importado_api	string1	Exibir apenas os registros gerados pela API
+
+ordenar_por	string100	DEPRECATED
+
+ordem_decrescente	string1	DEPRECATED
+
+filtrar_por_data_de	string10	Filtrar os registros a partir de uma data.
+
+filtrar_por_data_ate	string10	Filtrar os registros até uma data.
+
+filtrar_por_hora_de	string8	Filtro por hora a apartir de.
+
+filtrar_por_hora_ate	string8	Filtro por hora até.
+
+filtrar_apenas_inclusao	string1	Filtrar apenas os registros incluídos.
+
+filtrar_apenas_alteracao	string1	Filtrar apenas os registros alterados.
+
+clientesFiltro	clientesFiltro	Filtrar cadastro de clientes  
+
+clientesPorCodigo	clientesPorCodigoArray	Lista de Códigos para filtro de clientes
+
+exibir_caracteristicas	string1	Exibe as caracteristicas do cliente.
+
+exibir_obs	string1	Exibir as observações do cliente (S/N).+
+
+ordem_descrescente	string1	DEPRECATED
+
+clientes_list_response
+
+Lista de clientes cadastrados no omie.
+
+pagina	integer	Número da página retornada
+
+total_de_paginas	integer	Número total de páginas
+
+registros	integer	Número de registros retornados na página.
+
+total_de_registros	integer	total de registros encontrados
+
+clientes_cadastro_resumido	clientes_cadastro_resumidoArray	Cadastro reduzido de clientes.
+
+clientes_listfull_response
+
+Lista de clientes cadastrados no omie.
+
+pagina	integer	Número da página retornada
+
+total_de_paginas	integer	Número total de páginas
+
+registros	integer	Número de registros retornados na página.
+
+total_de_registros	integer	total de registros encontrados
+
+clientes_cadastro	clientes_cadastroArray	Cadastro reduzido de produtos
+
+clientes_lote_request
+
+lote	integer	Número do lote
+
+clientes_cadastro	clientes_cadastroArray	Cadastro reduzido de produtos
+
+clientes_lote_response
+
+Resposta do processamento do lote de clientes cadastrados.
+
+lote	integer	Número do lote
+
+codigo_status	string4	Código do status do processamento.+
+
+descricao_status	text	Descrição do status do processamento.+
+
+clientes_status
+
+Status de retorno do cadastro de clientes.
+
+codigo_cliente_omie	integer	Código de Cliente / Fornecedor
+
+codigo_cliente_integracao	string60	Código de Integração com sistemas legados.
+
+codigo_status	string4	Código do status do processamento.+
+
+descricao_status	text	Descrição do status do processamento.+
+
+dadosBancarios
+
+codigo_banco	string3	Código do Banco.
+
+agencia	string10	Agência
+
+conta_corrente	string25	Número da Conta Corrente.
+
+doc_titular	string20	CNPJ ou CPF do titular.
+
+nome_titular	string60	Nome do titular.
+
+transf_padrao	string1	Definir transferência como forma de pagamento padrão+
+
+cChavePix	string60	Chave PIX.
+
+enderecoEntrega
+
+entRazaoSocial	string60	Nome / Razão Social
+
+entCnpjCpf	string20	CNPJ / CPF do recebedor.
+
+entEndereco	string60	Endereço.
+
+entNumero	string60	Número do endereço.
+
+entComplemento	string60	Complemento do endereço.
+
+entBairro	string60	Bairro.
+
+entCEP	string9	CEP
+
+entEstado	string2	Estado.
+
+entCidade	string40	Cidade
+
+entSepararEndereco	string1	Separar endereço. +
+
+entTelefone	string15	Telefone
+
+entIE	string14	Inscrição Estadual
+
+info
+
+dInc	string10	Data da Inclusão.+
+
+hInc	string8	Hora da Inclusão.+
+
+uInc	string10	Usuário da Inclusão.
+
+dAlt	string10	Data da Alteração.+
+
+hAlt	string8	Hora da Alteração.+
+
+uAlt	string10	Usuário da Alteração.
+
+cImpAPI	string1	Importado pela API (S/N).
+
+omie_fail
+
+code	integer	Codigo do erro
+
+description	text	Descricao do erro
+
+referer	text	Origem do erro
+
+fatal	boolean	Indica se eh um erro fatal
+
+recomendacoes
+
+numero_parcelas	string3	Número de Parcelas padrão para as Vendas.
+
+codigo_vendedor	integer	Código do Vendedor padrão.
+
+email_fatura	string200	Enviar a NF-e e Boleto para outro e-mail?
+
+gerar_boletos	string1	Por padrão: Gerar Boletos ao Emitir NF-e?
+
+codigo_transportadora	integer	Código da Transportadora padrão.
+
+tipo_assinante	string1	Tipo de Assinante utilizado para notas fiscais via única (modelo 21 e 22).+
+
+tags
+
+Tags do Cliente ou Fornecedor
+
+tag	text	Tag do Cliente ou Fornecedor
+
+tagsArray
+
+Este parâmetro é um array do tipo tags
+
+Lista de tags
+
+Métodos
+AlterarCliente
+AssociarCodIntCliente
+ConsultarCliente
+ExcluirCliente
+IncluirCliente
+IncluirClientesPorLote
+ListarClientes
+ListarClientesResumido
+UpsertCliente
+UpsertClienteCpfCnpj
+UpsertClientesPorLote

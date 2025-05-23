@@ -1,0 +1,1774 @@
+Title: PedidoVendaProduto
+
+URL Source: http://app.omie.com.br/api/v1/produtos/pedido/
+
+Markdown Content:
+PedidoVendaProduto
+Endpoint
+WSDL
+PHP SOAP
+JSON
+Endpoint URI
+https://app.omie.com.br/api/v1/produtos/pedido/
+Métodos
+
+Veja abaixo a documentação de cada método disponível para este serviço.
+
+AlterarPedFaturado
+
+Parâmetros:
+ 	pvpAlterarPedFatRequest	pvpAlterarPedFatRequest	
+Solicitação de alteração do Pedido de Venda Faturado.
+Retorno pvpAlterarPedFatResponse:
+Exemplo:
+{
+  "codigo_pedido": 0,
+  "codigo_pedido_integracao": "",
+  "codigo_rastreio":"",
+  "previsao_entrega": "",
+  "obs_venda":""
+}
+Teste agora mesmo
+AlterarPedidoVenda
+
+Parâmetros:
+ 	pedido_venda_produto	pedido_venda_produto	
+Estrutura do Pedido de Vendas de Produtos.
++
+Preenchimento Obrigatório.
+Retorno pedido_venda_produto_response:
+Exemplo:
+{
+   "cabecalho": {
+      "bloqueado": "N",
+      "codigo_cliente": 3792227,
+      "codigo_pedido_integracao": "1746710085",
+      "data_previsao": "08/05/2025",
+      "etapa": "50",
+      "quantidade_itens": 1
+   },
+   "det": [
+      {
+         "ide": {
+            "codigo_item_integracao": "4422421",
+            "simples_nacional": "S"
+         },
+         "imposto": {
+            "cofins_padrao": {
+               "aliq_cofins": 3,
+               "base_cofins": 400,
+               "cod_sit_trib_cofins": "01",
+               "tipo_calculo_cofins": "B",
+               "valor_cofins": 12
+            },
+            "icms_sn": {
+               "aliq_icms_sn": 1.25,
+               "cod_sit_trib_icms_sn": 101,
+               "origem_icms_sn": 0,
+               "valor_credito_icms_sn": 5
+            },
+            "ipi": {
+               "cod_sit_trib_ipi": 51
+            },
+            "pis_padrao": {
+               "aliq_pis": 0.65,
+               "base_pis": 400,
+               "cod_sit_trib_pis": "01",
+               "tipo_calculo_pis": "B",
+               "valor_pis": 2.6
+            }
+         },
+         "inf_adic": {
+            "peso_bruto": 150,
+            "peso_liquido": 150
+         },
+         "produto": {
+            "cfop": "5.102",
+            "codigo_produto": "4422421",
+            "descricao": "Telefone Celular X",
+            "ncm": "9403.30.00",
+            "quantidade": 1,
+            "tipo_desconto": "V",
+            "unidade": "UN",
+            "valor_desconto": 0,
+            "valor_mercadoria": 200,
+            "valor_total": 200,
+            "valor_unitario": 200
+         }
+      }
+   ],
+   "informacoes_adicionais": {
+      "codigo_categoria": "1.01.03",
+      "codigo_conta_corrente": 11850365,
+      "consumidor_final": "S",
+      "enviar_email": "N"
+   },
+   "agropecuario": {
+      "cNumReceita": "",
+      "cCpfResponsavel": "",
+      "nTipoGuia": 1,
+      "cUFGuia": "",
+      "cSerieGuia": "",
+      "nNumGuia": 1
+   },
+   "lista_parcelas": {
+      "parcela": [
+         {
+            "data_vencimento": "09/05/2025",
+            "numero_parcela": 1,
+            "percentual": 50,
+            "valor": 100
+         },
+         {
+            "data_vencimento": "16/10/2025",
+            "numero_parcela": 2,
+            "percentual": 50,
+            "valor": 100
+         }
+      ]
+   },
+   "total_pedido": {
+      "base_calculo_icms": 200,
+      "valor_mercadorias": 200,
+      "valor_total_pedido": 200
+   }
+}
+
+Teste agora mesmo
+ConsultarPedido
+
+Consulta de Pedido de Venda de Produto
+
+Parâmetros:
+ 	pvpConsultarRequest	pvpConsultarRequest	
+Solicitação de consulta de pedido de venda.
+Retorno pvpConsultarResponse:
+Exemplo:
+{
+  "codigo_pedido": 25953530
+}
+Teste agora mesmo
+DevolverPedido
+
+Parâmetros:
+ 	pvpDevolverRequest	pvpDevolverRequest	
+Solicitação de devolução de pedido de venda.
+Retorno pvpDevolverResponse:
+Exemplo:
+{
+    "codigo_pedido": 0,
+    "codigo_pedido_integracao": "",
+    "itens": [
+        {
+            "codigo_produto": 0,
+            "quantidade": 0
+        }
+    ]
+}
+Teste agora mesmo
+ExcluirPedido
+
+Excluir pedido de venda de produto
+
+Parâmetros:
+ 	pvpExcluirRequest	pvpExcluirRequest	
+Solicitação de exclusão do Pedido de Venda.
+Retorno pvpExcluirResponse:
+Exemplo:
+{
+  "codigo_pedido": 0,
+  "codigo_pedido_integracao": ""
+}
+Teste agora mesmo
+IncluirPedido
+
+Inclui um pedido de venda de produto
+
+Parâmetros:
+ 	pedido_venda_produto	pedido_venda_produto	
+Estrutura do Pedido de Vendas de Produtos.
++
+Preenchimento Obrigatório.
+Retorno pedido_venda_produto_response:
+Exemplo:
+{
+  "cabecalho": {
+     "codigo_cliente": 3792227,
+     "codigo_pedido_integracao": "1746710085",
+     "data_previsao": "08/05/2025",
+     "etapa": "10",
+     "numero_pedido": "68125",
+     "codigo_parcela": "999",
+     "quantidade_itens": 2
+  },
+  "det": [
+    {
+      "ide": {
+        "codigo_item_integracao": "4422421"
+      },
+      "inf_adic": {
+        "peso_bruto": 150,
+        "peso_liquido": 150
+      },
+      "produto": {
+        "cfop": "5.102",
+        "codigo_produto": "4422421",
+        "descricao": "Telefone Celular X",
+        "ncm": "9403.30.00",
+        "quantidade": 1,
+        "tipo_desconto": "V",
+        "unidade": "UN",
+        "valor_desconto": 0,
+        "valor_unitario": 200
+      }
+    }
+  ],
+  "frete": {
+    "modalidade": "9"
+  },
+  "informacoes_adicionais": {
+    "codigo_categoria": "1.01.03",
+    "codigo_conta_corrente": 11850365,
+    "consumidor_final": "S",
+    "enviar_email": "N"
+  },
+  "agropecuario": {
+    "cNumReceita": "",
+    "cCpfResponsavel": "",
+    "nTipoGuia": 1,
+    "cUFGuia": "",
+    "cSerieGuia": "",
+    "nNumGuia": 1
+  },
+  "lista_parcelas": {
+    "parcela": [
+      {
+        "data_vencimento": "09/05/2025",
+        "numero_parcela": 1,
+        "percentual": 50,
+        "valor": 100
+      },
+      {
+        "data_vencimento": "29/10/2025",
+        "numero_parcela": 2,
+        "percentual": 50,
+        "valor": 100
+      }
+    ]
+  }
+}
+Teste agora mesmo
+ListarPedidos
+
+Listar os pedidos de venda de produto
+
+Parâmetros:
+ 	pvpListarRequest	pvpListarRequest	
+Solicitação de listagem de pedidos de venda.
+Retorno pvpListarResponse:
+Exemplo:
+{
+  "pagina": 1,
+  "registros_por_pagina": 100,
+  "apenas_importado_api": "N"
+}
+Teste agora mesmo
+SimularImpostos
+
+Simula os impostos de um pedido de venda.
+
+Parâmetros:
+ 	pvpSimularImpRequest	pvpSimularImpRequest	
+Informações da requisição para simulação dos impostos de um pedido de venda.
+Retorno pvpSimularImpResponse:
+Exemplo:
+{
+    "codigo_cliente": 0,
+    "consumidor_final": "",
+    "frete_simul": {
+           "valor_frete": 0 , 
+           "valor_seguro": 0 ,
+           "outras_despesas": 0
+     },
+    "det_simul": [
+        {
+            "codigo_cenario_impostos_item": 0,
+            "produto_simul":{
+                "codigo_produto": 0,
+                "quantidade": 0,
+                "valor_unitario": 0,
+                "valor_desconto": 0
+            }
+        }
+    ]
+}
+Teste agora mesmo
+StatusPedido
+
+Consulta do Status do Pedido
+
+Parâmetros:
+ 	pvpStatusRequest	pvpStatusRequest	
+Solicitação de consulta do Status do Pedido de Venda.
+Retorno pvpStatusResponse:
+Exemplo:
+{
+  "codigo_pedido": 0,
+  "codigo_pedido_integracao": ""
+}
+Teste agora mesmo
+TrocarEtapaPedido
+
+Troca etapa do pedido.
+
+Parâmetros:
+ 	pvpTrocarEtapaRequest	pvpTrocarEtapaRequest	
+Solicitação de troca de etapa do Pedido de Venda.
+Retorno pvpTrocarEtapaResponse:
+Exemplo:
+{
+  "codigo_pedido": 0,
+  "codigo_pedido_integracao": "",
+  "etapa":"20"
+}
+Teste agora mesmo
+Tipos Complexos
+ListaNfe
+
+Lista de NF-es geradas
+
+numero_lote	integer	Número do lote da NF-e
+
+status_lote	string3	Status do Lote da NF-e.
+
+recibo	integer	Recibo
+
+contingencia	string1	NF-e emitida em contingência
+
+numero_nfe	string10	Número da NF-e gerada
+
+serie_nfe	string5	Série da NF-e
+
+status_nfe	string44	Status da NF-e
+
+chave_nfe	string44	Chave de Acesso da NF-e
+
+protocolo	integer	Número do Protocolo
+
+tipo	string1	Tipo de Emissão.+
+
+data_emissao	string10	Data da Emissão da NF-e
+
+hora_emissao	string8	Hora da Emissão da NF-e
+
+data_fatura	string10	Data do faturamento
+
+hora_fatura	string8	Hora de Faturamento
+
+data_saida	string10	Data de Saída
+
+hora_saida	string8	Hora de Saída da NF-e
+
+mensagens	mensagensArray	Mensagens de Erros
+
+xml_distr	text	XML de distribuição da NF-e
+
+danfe	text	Link para o DANFE da NF-e gerada.
+
+ListaNfeArray
+
+Este parâmetro é um array do tipo ListaNfe
+
+Lista de ListaNfe
+
+agropecuario
+
+cNumReceita	string20	Número da receita ou receituário do agrotóxico/defensivo agrícola
+
+cCpfResponsavel	string14	CPF do responsá¡vel técnico legalmente habilitado
+
+nTipoGuia	integer	Tipo da Guia+
+
+cUFGuia	string2	UF de emissão da Guia
+
+cSerieGuia	string9	Número de série da guia
+
+nNumGuia	integer	Número da guia
+
+cabecalho
+
+codigo_pedido	integer	ID do pedido do venda.+
+
+codigo_pedido_integracao	string60	Código de integração do pedido de venda.+
+
+numero_pedido	string15	Número do pedido de venda.+
+
+sequencial	string4	Número sequencial do pedido de venda parcial.+
+
+codigo_cliente	integer	Código do cliente.+
+
+codigo_cliente_integracao	string60	Código Integração da Transportadora.+
+
+data_previsao	string10	Data de Previsão de Faturamento.+
+
+quantidade_itens	integer	Quantidade de Itens.+
+
+etapa	string2	Etapa do pedido de venda.+
+
+codigo_parcela	string3	Código da parcela/Condição de pagamento.+
+
+qtde_parcelas	integer	Quantidade de parcelas.+
+
+origem_pedido	string3	Origem do Pedido.+
+
+codigo_cenario_impostos	integer	Código do Cenário de Impostos.+
+
+bloqueado	string1	Pedido Bloqueado pela API.+
+
+importado_api	string1	Importado pela API.+
+
+codigo_empresa	integer	DEPRECATED
+
+codigo_empresa_integracao	string20	DEPRECATED
+
+tipo_desconto_pedido	string1	Tipo de desconto para o pedido.+
+
+perc_desconto_pedido	decimal	Percentual do desconto do pedido.+
+
+valor_desconto_pedido	decimal	Valor do desconto do pedido.+
+
+encerrado	string1	Indica que o pedido foi encerrado (S/N).+
+
+enc_motivo	string100	Descrição do motivo do encerramento.+
+
+enc_data	string10	Data de encerramento,+
+
+enc_hora	string8	Hora de encerramento,+
+
+enc_user	string10	Usuário do encerramento,+
+
+nao_gerar_boleto	string1	Indica se o boleto não deve ser gerado para a(s) parcela(s) ao emitir a nota fiscal.+
+
+cliente_simul
+
+clientes_contribuinte	string1	Indica que o Cliente é Contribuinte do ICMS+
+
+clientes_estado	string2	UF do Local de Embarque
+
+cidades_codmunibge	string7	Código do município conforme tabela do IBGE para simulação dos impostos
+
+clientes_suframa	string20	Inscrição SUFRAMA do cliente para simulação dos impostos.+
+
+clientes_cnae	string7	Informação localizada na Aba "Inscrições CNAE e Outros" do cadastro do Cliente para simulação dos impostos
+
+tipo_atividade	string1	Tipo da Atividade+
+
+optante_simples_nacional	string1	Indica se o Cliente / Fornecedor é Optante do Simples Nacional +
+
+cofins_padrao
+
+COFINS.
+
+cod_sit_trib_cofins	string2	Código da Situação Tributária do COFINS
+
+tipo_calculo_cofins	string1	Tipo de cálculo para obtenção do valor do PIS
+
+base_cofins	decimal	Base de Cálculo do COFINS
+
+aliq_cofins	decimal	Alíquota do COFINS
+
+qtde_unid_trib_cofins	decimal	Quantidade de Unidades Tributáveis do COFINS
+
+valor_unid_trib_cofins	decimal	Valor do COFINS por Unidade Tributável
+
+valor_cofins	decimal	Valor do COFINS
+
+cofins_st
+
+cod_sit_trib_cofins_st	string2	Código da Situação Tributária do COFINS
+
+tipo_calculo_cofins_st	string1	Tipo de cálculo para obtenção do valor do PIS Substituição Tributária
+
+base_cofins_st	decimal	Base de Cálculo do COFINS Substituição Tributária
+
+aliq_cofins_st	decimal	Alíquota do COFINS Substituição Tributária
+
+qtde_unid_trib_cofins_st	decimal	Quantidade de Unidades Tributáveis do PIS Substituição Tributária
+
+valor_unid_trib_cofins_st	decimal	Valor do PIS Substituição Tributária por Unidade Tributável
+
+margem_cofins_st	decimal	Margem de valor adicional para obter a base de cálculo do COFINS Substituição Tributária
+
+valor_cofins_st	decimal	Valor do PIS Substituição Tributária
+
+combustivel
+
+cCodigoANP	string9	Código de Produto da ANP.
+
+cDescrANP	string95	Descrição do Produto conforme ANP.
+
+cCODIF	string21	Registro do CODIF.
+
+nPercGLP	decimal	Percentual de GLP Derivado do Petróleo.
+
+nPercGasNacional	decimal	Percentual de Gás Natural Nacional.
+
+nPercGasImportado	decimal	Percentual de Gás Natural Importado.
+
+nValorPartida	decimal	Valor de Partida.
+
+nQtdeFatTempAmb	decimal	Quantidade Faturada à Temperatura Ambiente.
+
+cUFConsumoComb	string2	UF de Consumo.
+
+nBC_CIDE	decimal	Base de Cálculo (em quantidade) da CIDE.
+
+nAliquota_CIDE	decimal	Valor da Alíquota em Reais da CIDE.
+
+nValor_CIDE	decimal	Valor da CIDE.
+
+nBC_UFRem	decimal	Base de Cálculo da UF Remetente.+
+
+nValorUFRem	decimal	Valor da UF Remetente.+
+
+nBC_UFDest	decimal	Base de Cálculo da UF Destino.+
+
+nValorUFDest	decimal	Valor da UF Destino.+
+
+csll
+
+CSLL.
+
+aliq_csll	decimal	Alíquota do CSLL
+
+valor_csll	decimal	Valor do CSLL
+
+departamentos
+
+Dados da Aba "Departamentos" do Pedido de Venda.
+
+cCodDepto	string40	ID do Departamento.+
+
+nPerc	decimal	Percentual de Rateio.+
+
+nValor	decimal	Valor do Rateio.+
+
+nValorFixo	string1	Indica que o valor foi fixado na distribuição do rateio.+
+
+departamentosArray
+
+Este parâmetro é um array do tipo departamentos
+
+Lista de departamentos
+
+det
+
+Dados da Aba "Itens da Venda" do Pedido de Venda.
+
+ide	ide	Identificação do Item do Pedido de Vendas.+
+
+produto	produto	Identificação do Produto do Item do Pedido de Vendas.+
+
+observacao	observacao	Dados da aba "Observações" do Item do Pedido de Vendas.+
+
+inf_adic	inf_adic	Dados da aba "Informações Adicionais" do Item do Pedido de Vendas.+
+
+imposto	imposto	Informações referentes aos impostos do Item do Pedido de Vendas.+
+
+rastreabilidade	rastreabilidade	Dados da rastreabilidade do produto.
+
+combustivel	combustivel	Detalhamento específico de Combustível.
+
+tributavel	tributavel	Unidade, Quantidade, Valor e EAN tributáveis do item do pedido.
+
+detArray
+
+Este parâmetro é um array do tipo det
+
+Lista de det
+
+det_simul
+
+codigo_cenario_impostos_item	integer	Código do Cenário de Impostos.+
+
+produto_simul	produto_simul	Informações do produto para simulação dos impostos.
+
+det_simulArray
+
+Este parâmetro é um array do tipo det_simul
+
+Lista de det_simul
+
+det_simul_resp
+
+codigo_cenario_impostos_item	integer	Código do Cenário de Impostos.+
+
+produto_simul_resp	produto_simul_resp	Informações do produto para simulação de impostos
+
+imposto	imposto	Informações referentes aos impostos do Item do Pedido de Vendas.+
+
+det_simul_respArray
+
+Este parâmetro é um array do tipo det_simul_resp
+
+Lista de det_simul_resp
+
+exportacao
+
+Dados da exportacao
+
+nao_exportacao	string1	O cliente é estrangeiro, mas na verdade não se trata de uma exportação
+
+local_embarque	string60	Local de Embarque (ou de transposição de fronteira)
+
+uf_embarque	string2	UF do Local de Embarque
+
+local_despacho	string60	Local de Despacho
+
+frete
+
+Dados da Aba "Frete e Outras Despesas" do Pedido de Venda.
+
+codigo_transportadora	integer	ID da transportadora.+
+
+codigo_transportadora_integracao	string60	Código Integração da Transportadora.+
+
+modalidade	string1	Tipo de Frete.+
+
+placa	string7	Placa do Veículo.+
+
+placa_estado	string2	Estado da Placa do Veículo.+
+
+registro_transportador	string20	RNTRC (ANTT) - Registro Nacional de Transportador de Cargas.+
+
+quantidade_volumes	integer	Quantidade de Volumes.+
+
+especie_volumes	string60	Espécie dos Volumes.+
+
+marca_volumes	string60	Marca dos Volumes.+
+
+numeracao_volumes	string60	Numeração dos Volumes.+
+
+peso_liquido	decimal	Peso Líquido (Kg).+
+
+peso_bruto	decimal	Peso Bruto (Kg).+
+
+valor_frete	decimal	Valor do Frete.+
+
+valor_seguro	decimal	Valor do Seguro.+
+
+numero_lacre	string60	Número do Lacre.+
+
+outras_despesas	decimal	Outras Despesas Acessórias.+
+
+veiculo_proprio	string1	O transporte será realizado com veículo próprio.+
+
+previsao_entrega	string10	Previsão de entrega do Pedido de Venda+
+
+codigo_rastreio	string500	Código de Rastreio da Entrega do Pedido de Venda.+
+
+icms_retido	icms_retido	Dados do ICMS Retido do Serviço de Transporte.+
+
+codigo_tipo_entrega	integer	Código do tipo de entrega
+
+frete_simul
+
+valor_frete	decimal	Valor do Frete.+
+
+valor_seguro	decimal	Valor do Seguro.+
+
+outras_despesas	decimal	Outras Despesas Acessórias.+
+
+icms
+
+ICMS
+
+cod_sit_trib_icms	string2	NFe - Situação Tributária
+
+origem_icms	string1	NFe - Origem
+
+modalidade_icms	string1	NFe - Modalidade para determinação da Base de Cálculo do ICMs
+
+perc_red_base_icms	decimal	Percentual de redução da base de cálculo do ICMS
+
+base_icms	decimal	Base de cálculo do ICMS
+
+aliq_icms	decimal	Alíquota do ICMS
+
+valor_icms	decimal	Valor do ICMS
+
+perc_fcp_icms	decimal	Percentual do FCP - Fundo de Combate a Pobreza do ICMS.
+
+base_fcp_icms	decimal	Base de Cálculo do FCP - Fundo de Combate a Pobreza do ICMS.
+
+valor_fcp_icms	decimal	Valor do FCP - Fundo de Combate a Pobreza do ICMS.
+
+icms_efet
+
+ICMS efetivo.
+
+cod_sit_trib_icms_efet	string2	NFe - Situação Tributária
+
+origem_icms_efet	string1	NFe - Origem
+
+modalidade_icms_efet	string1	NFe - Modalidade para determinação da Base de Cálculo do ICMs
+
+perc_red_base_icms_efet	decimal	Percentual de redução da base de cálculo do ICMS
+
+base_icms_efet	decimal	Base de cálculo do ICMS
+
+aliq_icms_efet	decimal	Alíquota do ICMS
+
+valor_icms_efet	decimal	Valor do ICMS
+
+icms_ie
+
+ICMS Interestadual.
+
+base_icms_uf_destino	decimal	BC do ICMS na UF de Destino
+
+aliq_icms_FCP	decimal	Percentual do ICMS relativo ao Fundo de Combate à Pobreza (FCP) na UF de Destino
+
+aliq_interna_uf_destino	decimal	Alíquota Interna da UF de Destino
+
+aliq_interestadual	decimal	Alíquota Interestadual das UFs Envolvidas
+
+aliq_partilha_icms	decimal	Percentual Provisório de Partilha do ICMS Interestadual
+
+valor_fcp_icms_inter	decimal	Valor do fundo de combate a pobreza.
+
+valor_icms_uf_dest	decimal	Valor do ICMS - UF Destino
+
+valor_icms_uf_remet	decimal	Valor do ICMS - UF Remetente
+
+icms_retido
+
+vServicoTr	decimal	Valor de Serviço de Transporte.+
+
+vBCRetencaoTr	decimal	Base de Cálculo da Retenção.+
+
+vAliquotaRetencaoTr	decimal	Percentual de Alíquota de Retenção.+
+
+vIcmsRetidoTr	decimal	Valor de ICMS Retido.+
+
+cCfopTr	string10	CFOP.+
+
+cCidadeTr	string40	Cidade de Ocorrência do Fato Gerador do ICMS.+
+
+icms_sn
+
+ICMS - Simples Nacional.
+
+cod_sit_trib_icms_sn	string3	Código da situação tributária pelo Simples
+
+origem_icms_sn	string1	NFe - Origem
+
+aliq_icms_sn	decimal	Alíquota aplicável de cálculo do crédito de ICMS no Simples Nacional
+
+valor_credito_icms_sn	decimal	Valor do crédito de ICMS no Simples Nacional
+
+base_icms_sn	decimal	Base de Cálculo da UF Remetente.+
+
+valor_icms_sn	decimal	Valor do ICMS retido anteriormente por Substituição Tributária
+
+icms_st
+
+cod_sit_trib_icms_st	string2	NFe - Situação Tributária
+
+modalidade_icms_st	string1	NFe - Código da Modalidade de determinação da Base de Cálculo do ICMS ST
+
+perc_red_base_icms_st	decimal	Percentual de redução da base de cálculo do ICMS
+
+base_icms_st	decimal	Base de cálculo do ICMS Substituição Tributária
+
+aliq_icms_st	decimal	Alíquota do ICMS Substituição Tributária
+
+margem_icms_st	decimal	Percentual da margem do valor adicionado da base de cálculo do ICMS ST
+
+valor_icms_st	decimal	Valor do ICMS Substituição Tributária
+
+aliq_icms_opprop	decimal	Alíquota de ICMS Operação Própria.
+
+perc_red_base_icms_op	decimal	Percentual de redução de base de cálculo de Icms Operação Própria.
+
+cest	string9	CEST - Código Especificador da Substituíção Tributária.+
+
+perc_fcp_icms_st	decimal	Percentual do FCP - Fundo de Combate a Pobreza do ICMS ST.
+
+base_fcp_icms_st	decimal	Base de Cálculo do FCP - Fundo de Combate a Pobreza do ICMS ST.
+
+valor_fcp_icms_st	decimal	Valor do FCP - Fundo de Combate a Pobreza do ICMS ST.
+
+ide
+
+codigo_item_integracao	string30	Código de Integração do Item do Pedido de Venda.+
+
+codigo_item	integer	ID do Item do Pedido.+
+
+simples_nacional	string1	Indica que a empresa é Optante pelo Simples Nacional.+
+
+acao_item	string1	Ação para o item.+
+
+id_ordem_producao	integer	Id da Ordem de Produção.+
+
+regra_impostos	integer	DEPRECATED
+
+imposto
+
+icms_sn	icms_sn	ICMS - Simples Nacional.+
+
+icms	icms	ICMS+
+
+icms_st	icms_st	ICMS - Substituição Tributária.+
+
+icms_ie	icms_ie	ICMS Interestadual.+
+
+icms_efet	icms_efet	ICMS efetivo.+
+
+ipi	ipi	IPI.+
+
+pis_padrao	pis_padrao	PIS.+
+
+pis_st	pis_st	PIS - Substituíção Tributária.+
+
+cofins_padrao	cofins_padrao	COFINS.+
+
+cofins_st	cofins_st	COFINS - Substituição Tributária.+
+
+inss	inss	INSS.+
+
+csll	csll	CSLL.+
+
+irrf	irrf	IRRF.+
+
+iss	iss	ISS.+
+
+inf_adic
+
+peso_liquido	decimal	Peso Líquido (Kg).+
+
+peso_bruto	decimal	Peso Bruto (Kg).+
+
+numero_pedido_compra	string15	Número do Pedido de Compra.+
+
+item_pedido_compra	integer	Item do Pedido de Compra.+
+
+dados_adicionais_item	text	Informações para a Nota Fiscal.+
+
+nao_movimentar_estoque	string1	Não gerar a saída de estoque deste item ao emitir NF-e.+
+
+nao_gerar_financeiro	string1	Não gerar conta a receber para este item.+
+
+codigo_categoria_item	string20	Código da Categoria do item.+
+
+codigo_beneficio_fiscal	string10	Código do Benefício Fiscal.
+
+numero_fci	string36	Número da FCI (Ficha de Conteúdo de Importação)
+
+codigo_local_estoque	integer	Código do Local do Estoque.+
+
+codigo_cenario_impostos_item	integer	Código do Cenário de Impostos.+
+
+nao_somar_total	string1	Não somar este item no total da NF-e
+
+infoCadastro
+
+dInc	string10	Data da Inclusão.+
+
+hInc	string8	Hora da Inclusão.+
+
+uInc	string10	Usuário da Inclusão.+
+
+dAlt	string10	Data da Alteração.+
+
+hAlt	string8	Hora da Alteração.+
+
+uAlt	string10	Usuário da Alteração.+
+
+dCan	string10	Data da Cancelamento.+
+
+hCan	string8	Hora da Cancelamento.+
+
+uCan	string10	Usuário da Cancelamento.+
+
+cancelado	string1	Indica se o pedido foi cancelado.+
+
+dFat	string10	Data de Faturamento.+
+
+hFat	string8	Hora de faturamento.+
+
+uFat	string10	Usuário que realizou o faturamento.+
+
+faturado	string1	Indica se o pedido está faturado.+
+
+denegado	string1	Indica se o pedido foi denegado.+
+
+autorizado	string1	Indica se o pedido foi autorizado
+
+devolvido	string1	Indica se o pedido foi devolvido.+
+
+devolvido_parcial	string1	Indica se o pedido foi devolvido parcialmente.+
+
+cImpAPI	string1	Importado pela API.+
+
+informacoes_adicionais
+
+codigo_categoria	string20	Código da categoria.+
+
+codigo_conta_corrente	integer	Código da Conta Corrente.+
+
+numero_pedido_cliente	string30	Número do pedido do cliente.+
+
+numero_contrato	string60	Número do Contrato de Venda.+
+
+contato	string100	Contato.+
+
+dados_adicionais_nf	text	Dados adicionais para a Nota Fiscal.+
+
+consumidor_final	string1	Nota Fiscal para Consumo Final.+
+
+utilizar_emails	text	Utilizar os seguintes endereços de e-mail.+
+
+enviar_email	string1	Enviar e-mail com o boleto de cobrança gerado pelo faturamento (juntamente com o DANFE e o XML da NF-e).+
+
+enviar_pix	string1	Enviar e-mail com o PIX de cobrança gerado pelo faturamento (juntamente com o DANFE e o XML da NF-e).+
+
+codVend	integer	Código do Vendedor.+
+
+codProj	integer	Código do Projeto.+
+
+outros_detalhes	outros_detalhes	Outros detalhes da NF-e.+
+
+impostos_embutidos	string1	DEPRECATED
+
+meio_pagamento	string100	Meio de Pagamento - Utilizado apenas para emissão de NF-e (campo "tPag" do XML). +
+
+descr_meio_pagamento	text	Descrição do Meio de Pagamento - Utilizado apenas para emissão de NF-e (campo "xPag" do XML).+
+
+tipo_documento	string5	Tipo de Documento.+
+
+nfRelacionada	nfRelacionada	Detalhes da NF referenciada
+
+nsu	string100	Número Sequencial Único NSU - Para identificar vendas por cartões ou TransactionID TID - Para identificar vendas de comercio eletrônico.+
+
+inss
+
+INSS.
+
+aliq_inss	decimal	Alíquota do INSS
+
+valor_inss	decimal	Valor do INSS
+
+ipi
+
+IPI.
+
+cod_sit_trib_ipi	string2	Código da situação tributária do IPI
+
+tipo_calculo_ipi	string1	Tipo de cálculo para obtenção do valor do IPI
+
+enquadramento_ipi	text	Enquadramento do IPI
+
+base_ipi	decimal	Base de Cálculo do IPI
+
+aliq_ipi	decimal	Alíquota do IPI
+
+qtde_unid_trib_ipi	decimal	Quantidade de Unidades Tributáveis do IPI
+
+valor_unid_trib_ipi	decimal	Valor do IPI por Unidade Tributável
+
+valor_ipi	decimal	Valor do IPI
+
+irrf
+
+IRRF.
+
+aliq_irrf	decimal	Alíquota do IRRF
+
+valor_irrf	decimal	Valor do IRRF
+
+iss
+
+ISS.
+
+base_iss	decimal	Base de cálculo do ISS
+
+aliq_iss	decimal	Alíquota do ISS
+
+valor_iss	decimal	Valor do ISS
+
+retem_iss	string1	Indica que o valor do ISS será retido pelo tomador do serviço
+
+itens
+
+codigo_produto	integer	ID do Produto.+
+
+quantidade	decimal	Quantidade+
+
+lancamentos
+
+nSequencia	integer	Número da Sequencia.+
+
+cNaturezaDocumento	string1	Natureza do Documento.+
+
+nValorDocumento	decimal	Valor do Documento.+
+
+dDataDocumento	string10	Data do documento.+
+
+cTipoDocumento	string5	Tipo de Documento.+
+
+cCategoria	string20	Código da Categoria.+
+
+nContaCorrente	integer	Id da Conta Corrente.+
+
+cOrigem	string3	Origem da Nota Fiscal.+
+
+cObs	text	Observações.+
+
+nProjeto	integer	Id do projeto.+
+
+nVendedor	integer	Id do Vendedor.+
+
+lista_parcelas
+
+Dados da Aba "Parcelas" do Pedido de Venda.
+
+parcela	parcelaArray	Dados da parcela.
+
+market_place
+
+Dados para o Market Place.
+
+nTaxa	decimal	Valor da taxa do Market Place.
+
+nEnvio	decimal	Valor do envio do Market Place.
+
+mensagens
+
+Mensagens de Erros
+
+cCodigo	text	Código da mensagem de erro/aviso
+
+cDescricao	text	Descrição da mensagem de erro/aviso.
+
+cCorrecao	text	Correção da descrição de mensagem de erro/aviso.
+
+mensagensArray
+
+Este parâmetro é um array do tipo mensagens
+
+Lista de mensagens
+
+nfRelacionada
+
+Detalhes da NF referenciada
+
+cChaveRef	string44	Chave da NF-e (ou NFC-e ou SAT) Relacionada.
+
+nNFRef	string9	Número da Nota Fiscal+
+
+cSerieRef	string3	Série da NF Referenciada.+
+
+dtEmissaoRef	string10	Data de emissão da NF Referenciada.+
+
+cnpjEmitRef	string20	CNPJ da Emitente da NF Referenciada.+
+
+cUfRef	string2	Estado do Emitente da NF Referenciada.+
+
+nNfPR	string9	Número da Nota Fiscal relacionada do Produtor Rural.+
+
+cSeriePR	string3	Série da NF do Produtor Rural.+
+
+dtEmissaoPR	string10	Data de emissão da NF do Produtor Rural.+
+
+cnpjPR	string20	CNPJ/CPF do Produtor Rural.+
+
+InscrEstPR	string20	Inscrição Estadual do Produtor Rural.+
+
+cUfPR	string2	Estado do Produtor Rural.+
+
+nCOORef	string6	Número do COO - Contador de Ordem de Operação.+
+
+nECFRef	string3	Número de Ordem Sequencial do ECF.
+
+indPresenca	string1	Indicador de Presença da Operação.+
+
+indIntermediario	string1	Indicador de Intermediador.+
+
+cnpjIntermediario	string20	CNPJ do Intermediador.+
+
+identIntermediario	string60	Identificação no Intermediador.+
+
+nrProdutorRural	nrProdutorRuralArray	Outras notas de produtor rural relacionadas
+
+nrNF	nrNFArray	Outras NF-e, NFC-e ou SAT relacionadas
+
+nrCupomFiscal	nrCupomFiscalArray	Outros cupons fiscais relacionados
+
+nrModelo1_1A	nrModelo1_1AArray	Outras notas modelo 1/1A relacionadas
+
+cSigNFRef	string1	Manter o sigilo da NF-e referenciada.+
+
+nrCupomFiscal
+
+Outros cupons fiscais relacionados
+
+cAcaoItem	string1	Ação a ser realizada no item na alteração.+
+
+nrCOO	string6	Contador de Ordem de Operação (COO)
+
+nrNumeroECF	string3	Número do ECF
+
+nrCupomFiscalArray
+
+Este parâmetro é um array do tipo nrCupomFiscal
+
+Lista de nrCupomFiscal
+
+nrModelo1_1A
+
+Outras notas modelo 1/1A relacionadas
+
+cAcaoItem	string1	Ação a ser realizada no item na alteração.+
+
+nrNumero	string9	Número da NF relacionada
+
+nrSerie	string3	Série da NF relacionada
+
+nrDtEmissao	string10	Data de emissão da NF relacionada
+
+nrCnpjCpf	string20	CNPJ/CPF do emitente da NF relacionada
+
+nrUF	string2	Unidade federativa do emitente da NF relacionada
+
+nrModelo1_1AArray
+
+Este parâmetro é um array do tipo nrModelo1_1A
+
+Lista de nrModelo1_1A
+
+nrNF
+
+Outras NF-e, NFC-e ou SAT relacionadas
+
+cAcaoItem	string1	Ação a ser realizada no item na alteração.+
+
+nrChave	string44	Chave da NF-e, NFC-e ou SAT relacionada
+
+nrNFArray
+
+Este parâmetro é um array do tipo nrNF
+
+Lista de nrNF
+
+nrProdutorRural
+
+Outras notas de produtor rural relacionadas
+
+cAcaoItem	string1	Ação a ser realizada no item na alteração.+
+
+nrNumero	string9	Número da NF relacionada
+
+nrSerie	string3	Série da NF relacionada
+
+nrDtEmissao	string10	Data de emissão da NF relacionada
+
+nrCnpjCpf	string20	CNPJ/CPF do emitente da NF relacionada
+
+nrIE	string20	Inscrição Estadual do emitente da NF relacionada
+
+nrUF	string2	Unidade federativa do emitente da NF relacionada
+
+nrProdutorRuralArray
+
+Este parâmetro é um array do tipo nrProdutorRural
+
+Lista de nrProdutorRural
+
+observacao
+
+obs_item	text	Observações do item (elas não serão exibidas na Nota Fisca, mas serão impressas no pedido de vendal).+
+
+observacoes
+
+obs_venda	text	Observações da venda (elas não serão exibidas na Nota Fiscal).+
+
+omie_fail
+
+code	integer	Codigo do erro
+
+description	text	Descricao do erro
+
+referer	text	Origem do erro
+
+fatal	boolean	Indica se eh um erro fatal
+
+outros_detalhes
+
+Outros detalhes da NF-e.
+
+cNatOperacaoOd	string60	Natureza da Operação.+
+
+cIndicadorOd	string1	Indicador de Presença da Operação.+
+
+cIndicadorIntOd	string1	Indicador de Intermediador.+
+
+cCnpjIntOd	string20	CNPJ do Intermediador.+
+
+cIdentificadorIntOd	string60	Identificação no Intermediador.+
+
+dDataSaidaOd	string10	Data de Saída.+
+
+cHoraSaidaOd	string8	Hora de Saída.+
+
+cCnpjCpfOd	string20	CNPJ / CPF (do recebedor).+
+
+cNomeOd	string60	Nome / Razão Social.+
+
+cInscrEstadualOd	string20	Inscrição Estadual.+
+
+cEnderecoOd	string60	Endereço.+
+
+cNumeroOd	string10	Número do endereço.+
+
+cComplementoOd	string60	Complemento do endereço.+
+
+cBairroOd	string60	Bairro.+
+
+cEstadoOd	string2	Estado.+
+
+cCidadeOd	string40	Cidade.+
+
+cCEPOd	string10	CEP.+
+
+cSepararEnderecoOd	string1	Separar endereço. +
+
+cTelefoneOd	string15	Telefone.+
+
+cCnpjCpfOdRet	string20	CPF/CNPJ (Local de Retirada).+
+
+cNomeOdRet	string60	Nome / Razão Social (Local de Retirada).+
+
+cInscrEstadualOdRet	string20	Inscrição Estadual (Local de Retirada).+
+
+cEnderecoOdRet	string60	Endereço (Local de Retirada).+
+
+cNumeroOdRet	string10	Número do endereço (Local de Retirada).+
+
+cComplementoOdRet	string60	Complemento do endereço (Local de Retirada).+
+
+cBairroOdRet	string60	Bairro (Local de Retirada).+
+
+cEstadoOdRet	string2	Estado (Local de Retirada).+
+
+cCidadeOdRet	string40	Cidade (Local de Retirada).+
+
+cCEPOdRet	string10	CEP (Local de Retirada).+
+
+cSepararEnderecoOdRet	string1	Separar endereço. +
+
+cTelefoneOdRet	string15	Telefone (Local de Retirada).+
+
+parcela
+
+Dados da parcela.
+
+numero_parcela	integer	Número da Parcela.+
+
+valor	decimal	Valor do Documento.+
+
+percentual	decimal	Percentual da Parcela.+
+
+data_vencimento	string10	Data do documento.+
+
+quantidade_dias	integer	Quantidade de dias até o vencimento da parcela.+
+
+tipo_documento	string5	Tipo de Documento.+
+
+meio_pagamento	string100	Meio de Pagamento - Utilizado apenas para emissão de NF-e (campo "tPag" do XML). +
+
+descr_meio_pagamento	text	Descrição do Meio de Pagamento - Utilizado apenas para emissão de NF-e (campo "xPag" do XML).+
+
+nsu	string100	Número Sequencial Único NSU - Para identificar vendas por cartões ou TransactionID TID - Para identificar vendas de comercio eletrônico.+
+
+nao_gerar_boleto	string1	Indica se o boleto não deve ser gerado para a(s) parcela(s) ao emitir a nota fiscal.+
+
+parcela_adiantamento	string1	Está é uma parcela de Adiantamento do Cliente.+
+
+categoria_adiantamento	string20	Código da Categoria para o Adiantamento.+
+
+conta_corrente_adiantamento	integer	Conta Corrente de Adiantamento.+
+
+parcelaArray
+
+Este parâmetro é um array do tipo parcela
+
+Lista de parcela
+
+pedido_venda_produto
+
+Estrutura do Pedido de Vendas de Produtos.
+
+cabecalho	cabecalho	Informações do cabeçalho do pedido.+
+
+departamentos	departamentosArray	Dados da Aba "Departamentos" do Pedido de Venda.
+
+frete	frete	Dados da Aba "Frete e Outras Despesas" do Pedido de Venda.+
+
+informacoes_adicionais	informacoes_adicionais	Dados da Aba "Informações Adicionais" do Pedido de Venda.+
+
+lista_parcelas	lista_parcelas	Dados da Aba "Parcelas" do Pedido de Venda.+
+
+observacoes	observacoes	Dados da Aba "Observações" do Pedido de Venda.+
+
+det	detArray	Dados da Aba "Itens da Venda" do Pedido de Venda.+
+
+market_place	market_place	Dados para o Market Place.
+
+total_pedido	total_pedido	Valores totais do pedido.+
+
+infoCadastro	infoCadastro	Informações complementares do pedido.+
+
+exportacao	exportacao	Dados da exportacao
+
+lancamentos	lancamentos	Lançamentos no Conta Corrente relacionados ao Pedido de Vendas taxas,entre outros).+
+
+agropecuario	agropecuario	Dados para atender NT 2024.003. Informações de Produtos da Agricultura, Pecuária e Produção Florestal
+
+pedido_venda_produtoArray
+
+Este parâmetro é um array do tipo pedido_venda_produto
+
+Lista de pedido_venda_produto
+
+pedido_venda_produto_response
+
+codigo_pedido	integer	ID do pedido do venda.+
+
+codigo_pedido_integracao	string60	Código de integração do pedido de venda.+
+
+codigo_status	string4	Código do status do processamento.+
+
+descricao_status	text	Descrição do status do processamento.+
+
+numero_pedido	string15	Número do pedido de venda.+
+
+pis_padrao
+
+PIS.
+
+cod_sit_trib_pis	string2	Código da Situação Tributária do PIS
+
+tipo_calculo_pis	string1	Tipo de cálculo para obtenção do valor do PIS
+
+base_pis	decimal	Base de Cálculo do PIS
+
+aliq_pis	decimal	Alíquota do PIS
+
+qtde_unid_trib_pis	decimal	Quantidade de Unidades Tributáveis do PIS
+
+valor_unid_trib_pis	decimal	Valor do PIS por Unidade Tributável
+
+valor_pis	decimal	Valor do PIS
+
+pis_st
+
+cod_sit_trib_pis_st	string2	Código da Situação Tributária do PIS
+
+tipo_calculo_pis_st	string1	Tipo de cálculo para obtenção do valor do PIS Substituição Tributária
+
+base_pis_st	decimal	Base de Cálculo do PIS Substituição Tributária
+
+aliq_pis_st	decimal	Alíquota do PIS Substituição Tributária
+
+qtde_unid_trib_pis_st	decimal	Quantidade de Unidades Tributáveis do PIS Substituição Tributária
+
+valor_unid_trib_pis_st	decimal	Valor do PIS Substituição Tributária por Unidade Tributável
+
+margem_pis_st	decimal	Margem de valor adicional para obter a base de cálculo do PIS Substituição Tributária
+
+valor_pis_st	decimal	Valor do PIS Substituição Tributária
+
+produto
+
+codigo_produto	integer	ID do Produto.+
+
+codigo_produto_integracao	string60	Código de integração do Produto.+
+
+codigo	string60	Código do Produto exibido na tela do Pedido de Vendas.+
+
+descricao	string120	Descrição do Produto.+
+
+cfop	string10	CFOP - Código Fiscal de Operações e Prestações.+
+
+ncm	string13	NCM - Nomenclatura Comum do Mercosul+
+
+ean	string14	EAN - European Article Number+
+
+unidade	string6	Unidade.+
+
+quantidade	decimal	Quantidade+
+
+valor_unitario	decimal	Valor Únitário+
+
+codigo_tabela_preco	integer	Código da tabela de preço.+
+
+valor_mercadoria	decimal	Valor da Mercadoria+
+
+tipo_desconto	string1	Tipo de Desconto.+
+
+percentual_desconto	decimal	Percentual de Desconto.+
+
+valor_desconto	decimal	Valor do Desconto+
+
+valor_deducao	decimal	Valor da Dedução+
+
+valor_icms_desonerado	decimal	Valor do ICMS desonerado
+
+motivo_icms_desonerado	string2	Código do Motivo de desoneração do ICMS+
+
+valor_total	decimal	Valor Total.+
+
+indicador_escala	string1	Indicador de Produção em Escala Relevante.+
+
+cnpj_fabricante	string20	CNPJ do Fabricante da Mercadoria.
+
+kit	string1	Indica se o produto é um kit
+
+componente_kit	string1	Indica se o produto é um componente de um kit
+
+codigo_item_kit	integer	ID do Item do kit (pai) que o componente pertence
+
+reservado	string1	(S/N) Indica se o estoque do produto será reservado.
+
+produto_simul
+
+codigo_produto	integer	ID do Produto.+
+
+codigo_produto_integracao	string60	Código de integração do Produto.+
+
+codigo_item_integracao	integer	Código de Integração do Item do Pedido de Venda.+
+
+quantidade	decimal	Quantidade+
+
+valor_unitario	decimal	Valor Únitário+
+
+valor_desconto	decimal	Valor do Desconto+
+
+produto_simul_resp
+
+codigo_produto	integer	ID do Produto.+
+
+codigo_produto_integracao	string60	Código de integração do Produto.+
+
+codigo_item_integracao	integer	Código de Integração do Item do Pedido de Venda.+
+
+codigo_item_kit	integer	ID do Item do kit (pai) que o componente pertence.+
+
+quantidade	decimal	Quantidade+
+
+valor_unitario	decimal	Valor Únitário+
+
+valor_desconto	decimal	Valor do Desconto+
+
+valor_icms_desonerado	decimal	Valor do ICMS desonerado
+
+motivo_icms_desonerado	string2	Código do Motivo de desoneração do ICMS+
+
+valor_total	decimal	Valor Total.+
+
+cfop	string10	CFOP - Código Fiscal de Operações e Prestações.+
+
+pvpAlterarPedFatRequest
+
+codigo_pedido	integer	ID do pedido do venda.+
+
+codigo_pedido_integracao	string60	Código de integração do pedido de venda.+
+
+numero_pedido	string15	Número do pedido de venda.+
+
+codigo_rastreio	string500	Código de Rastreio da Entrega do Pedido de Venda.+
+
+previsao_entrega	string10	Previsão de entrega do Pedido de Venda+
+
+obs_venda	text	Observações da venda (elas não serão exibidas na Nota Fiscal).+
+
+pvpAlterarPedFatResponse
+
+codigo_pedido	integer	ID do pedido do venda.+
+
+codigo_pedido_integracao	string60	Código de integração do pedido de venda.+
+
+numero_pedido	string15	Número do pedido de venda.+
+
+codigo_status	string4	Código do status do processamento.+
+
+descricao_status	text	Descrição do status do processamento.+
+
+pvpConsultarRequest
+
+codigo_pedido	integer	ID do pedido do venda.+
+
+codigo_pedido_integracao	string60	Código de integração do pedido de venda.+
+
+numero_pedido	string15	Número do pedido de venda.+
+
+pvpConsultarResponse
+
+pedido_venda_produto	pedido_venda_produto	Estrutura do Pedido de Vendas de Produtos.+
+
+pvpDevolverRequest
+
+codigo_pedido	integer	ID do pedido do venda.+
+
+codigo_pedido_integracao	string60	Código de integração do pedido de venda.+
+
+itens	itens	Informações dos itens que serão devolvidos.+
+
+pvpDevolverResponse
+
+cCodStatus	string4	Código do status do processamento.+
+
+cDesStatus	text	Descrição do status do processamento.+
+
+nIdDevolucao	integer	ID da devolução.
+
+pvpExcluirRequest
+
+codigo_pedido	integer	ID do pedido do venda.+
+
+codigo_pedido_integracao	string60	Código de integração do pedido de venda.+
+
+pvpExcluirResponse
+
+codigo_pedido	integer	ID do pedido do venda.+
+
+codigo_pedido_integracao	string60	Código de integração do pedido de venda.+
+
+numero_pedido	string15	Número do pedido de venda.+
+
+codigo_status	string4	Código do status do processamento.+
+
+descricao_status	text	Descrição do status do processamento.+
+
+pvpListarRequest
+
+pagina	integer	Número da página que será listada.
+
+registros_por_pagina	integer	Número de registros retornados
+
+apenas_importado_api	string1	Exibir apenas os registros gerados pela API
+
+ordenar_por	string100	Ordem de exibição dos dados. Padrão: Código.
+
+filtrar_por_data_de	string10	Filtra os registros a partir da data.
+
+filtrar_por_data_ate	string10	Filtrar lançamentos incluídos e/ou alterados até a data
+
+filtrar_por_hora_de	string8	Filtra os registros a partir da hora específicada.
+
+filtrar_por_hora_ate	string8	Filtra os registros até a hora específicada.
+
+filtrar_apenas_inclusao	string1	Filtrar apenas registros incluídos (S/N)
+
+filtrar_apenas_alteracao	string1	Filtrar apenas registros alterados (S/N)
+
+filtrar_por_cliente	integer	Filtra os registros do cliente específicado.
+
+filtrar_por_vendedor	integer	Filtra os registros do vendedor específicado.
+
+filtrar_por_projeto	integer	Filtra os registros do projeto específicado.
+
+etapa	string2	Etapa do pedido de venda.+
+
+numero_pedido_de	integer	Filtra os registros a partir do número do pedido específicado.
+
+numero_pedido_ate	integer	Filtra os registros até o número do pedido específicado.
+
+apenas_resumo	string1	Exibir apenas o resumo do pedido de vendas.+
+
+data_previsao_de	string10	Data de Previsão do faturamento inicio.
+
+data_previsao_ate	string10	Data de Previsão do faturamento final.
+
+data_faturamento_de	string10	Data de Faturamento inicial.
+
+data_faturamento_ate	string10	Data de Faturamento final.
+
+data_emissao_de	string10	DEPRECATED
+
+data_emissao_ate	string10	DEPRECATED
+
+data_cancelamento_de	string10	Data de Cancelamento inicial.
+
+data_cancelamento_ate	string10	Data de Cancelamento final.
+
+status_pedido	string100	Status do Pedido.+
+
+ordem_descrescente	string1	DEPRECATED
+
+pvpListarResponse
+
+pagina	integer	Número da página que será listada.
+
+total_de_paginas	integer	Total de páginas encontradas.
+
+registros	integer	Número de registros retornados
+
+total_de_registros	integer	Total de registros encontrados.
+
+pedido_venda_produto	pedido_venda_produtoArray	Estrutura do Pedido de Vendas de Produtos.+
+
+pvpSimularImpRequest
+
+codigo_cliente	integer	Código do cliente.+
+
+cliente_simul	cliente_simul	Informações de cliente para simulação dos impostos.
+
+codigo_cliente_integracao	string60	Código Integração da Transportadora.+
+
+consumidor_final	string1	Nota Fiscal para Consumo Final.+
+
+impostos_embutidos	string1	DEPRECATED
+
+frete_simul	frete_simul	Informações sobre o frete
+
+uf_entrega	string2	Estado onde ocorrerá a entrega do produto.+
+
+indPresenca	string1	Indicador de Presença da Operação.+
+
+det_simul	det_simulArray	Dados do item do Pedido de Vendas para simulação dos impostos.+
+
+pvpSimularImpResponse
+
+codigo_cliente	integer	Código do cliente.+
+
+codigo_cliente_integracao	string60	Código Integração da Transportadora.+
+
+consumidor_final	string1	Nota Fiscal para Consumo Final.+
+
+frete_simul	frete_simul	Informações sobre o frete
+
+uf_entrega	string2	Estado onde ocorrerá a entrega do produto.+
+
+indPresenca	string1	Indicador de Presença da Operação.+
+
+det_simul_resp	det_simul_respArray	Retorno com o detalhe do item com a simulação de impostos
+
+pvpStatusRequest
+
+codigo_pedido	integer	ID do pedido do venda.+
+
+codigo_pedido_integracao	string60	Código de integração do pedido de venda.+
+
+pvpStatusResponse
+
+codigo_pedido	integer	ID do pedido do venda.+
+
+codigo_pedido_integracao	string60	Código de integração do pedido de venda.+
+
+numero_pedido	string15	Número do pedido de venda.+
+
+etapa	string2	Etapa do pedido de venda.+
+
+cancelada	string1	NF-e Cancelada?
+
+faturada	string1	Nota Fiscal foi faturada
+
+ambiente	string1	Ambiente da NF-e (Danfe)
+
+valor_total_pedido	decimal	Valor total do pedido.+
+
+ListaNfe	ListaNfeArray	Lista de NF-es geradas
+
+pvpTrocarEtapaRequest
+
+codigo_pedido	integer	ID do pedido do venda.+
+
+codigo_pedido_integracao	string60	Código de integração do pedido de venda.+
+
+numero_pedido	string15	Número do pedido de venda.+
+
+etapa	string2	Etapa do pedido de venda.+
+
+pvpTrocarEtapaResponse
+
+codigo_pedido	integer	ID do pedido do venda.+
+
+codigo_pedido_integracao	string60	Código de integração do pedido de venda.+
+
+numero_pedido	string15	Número do pedido de venda.+
+
+codigo_status	string4	Código do status do processamento.+
+
+descricao_status	text	Descrição do status do processamento.+
+
+rastreabilidade
+
+Dados da rastreabilidade do produto.
+
+numeroLote	string20	Número do Lote
+
+qtdeProdutoLote	decimal	Quantidade de Produto
+
+dataFabricacaoLote	string10	Data de Fabricação/Produção
+
+dataValidadeLote	string10	Data de Validade
+
+codigoAgregacaoLote	string20	Código de Agregação
+
+total_pedido
+
+Valores totais do pedido.
+
+base_calculo_icms	decimal	Base de Cálculo do ICMS.+
+
+base_calculo_st	decimal	Base de cálculo da substituição tributária.+
+
+valor_pis	decimal	Valor do PIS.+
+
+valor_cofins	decimal	Valor do cofins.+
+
+valor_csll	decimal	Valor da CSLL.+
+
+valor_icms	decimal	Valor total do ICMS.+
+
+valor_st	decimal	Valor total da ST.+
+
+valor_inss	decimal	Valor do INSS.+
+
+valor_IPI	decimal	Valor do IPI.+
+
+valor_ir	decimal	Valor do IR.+
+
+valor_iss	decimal	Valor do ISS.+
+
+valor_deducoes	decimal	Valor das deduções.+
+
+valor_descontos	decimal	Valor dos descontos.+
+
+valor_mercadorias	decimal	valor das mercadorias.+
+
+valor_total_pedido	decimal	Valor total do pedido.+
+
+tributavel
+
+cUnidTrib	string6	Unidade tributável do Item.
+
+nQuantTrib	decimal	Quantidade tributável do item.
+
+nValorTrib	decimal	Valor tributável do item.
+
+cEanTrib	string14	código EAN tributável do item.
+
+Métodos
+AlterarPedFaturado
+AlterarPedidoVenda
+ConsultarPedido
+DevolverPedido
+ExcluirPedido
+IncluirPedido
+ListarPedidos
+SimularImpostos
+StatusPedido
+TrocarEtapaPedido
